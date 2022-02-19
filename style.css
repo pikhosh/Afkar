@@ -12,11 +12,16 @@
     font-weight: normal;
 }
 
+:root {
+    --Font: 'Vazir Code', 'Vazir Code Hack', monospaced;
+    --BorderColor: Black;
+}
+
 body,
 h1,
 h2,
 h3 {
-    font-family: 'Vazir Code', 'Vazir Code Hack', monospaced;
+    font-family: var(--Font);
 }
 
 #one-post-in-list,
@@ -36,8 +41,6 @@ body {
     margin: auto;
     max-width: 800px;
     padding: 0 40px;
-    font-size: unset;
-    ;
 }
 
 #footer {
@@ -45,7 +48,7 @@ body {
 }
 
 #post-category {
-    border: black 2px solid;
+    border: var(--BorderColor) 2px solid;
     border-radius: 5px;
     padding: 5px;
 }
@@ -63,7 +66,7 @@ a:hover {
     text-decoration: underline;
 }
 
-#title h2 {
+#title p {
     color: #666;
 }
 
@@ -74,7 +77,7 @@ hr {
 img {
     width: 100%;
     height: auto;
-    border: black 3px solid;
+    border: var(--BorderColor) 3px solid;
 }
 
 #post-detail {
@@ -117,4 +120,65 @@ img {
 
 .likeanddis {
     text-align: center;
+}
+
+#footer {
+    margin: 20px 0;
+}
+
+.bComForm .commentAvatar span {
+    margin: -19px 0 0;
+    font-size: 12px;
+}
+
+.bComForm .sendbutton.hasCheckbox:hover,
+select,
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+.formField2 label {
+    cursor: text;
+}
+
+.formField2 .fldcontent {
+    margin-right: 8em;
+}
+
+.formField2 label {
+    width: 7em;
+}
+
+textarea,
+input,
+select {
+    font-family: var(--Font);
+}
+
+textarea,
+input,
+select,
+body {
+    font-size: unset;
+}
+
+.bComForm .sendbutton.hasCheckbox,
+.bComForm .sendbutton {
+    margin: 5px 40% 10px 40%;
+    padding: 5px 0;
+    width: -webkit-fill-available;
+}
+
+#page-content {
+    margin-bottom: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #252525;
+        color: #ffffffde;
+    }
+     :root {
+        --BorderColor: white;
+    }
 }
