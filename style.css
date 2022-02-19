@@ -69,7 +69,7 @@ hr {
 img {
     width: 100%;
     height: auto;
-    border: var(--BorderColor) 3px solid;
+    border: var(--BorderColor) 2px solid;
 }
 
 #post-detail {
@@ -85,7 +85,7 @@ img {
 }
 
 .one-comment {
-    border: var(--BorderColor) solid 3px;
+    border: var(--BorderColor) solid 2px;
     padding: 10px;
 }
 
@@ -103,7 +103,7 @@ img {
 }
 
 .comment-reply-body {
-    border: var(--BorderColor) solid 3px;
+    border: var(--BorderColor) solid 2px;
     padding: 4px;
     width: -webkit-fill-available;
 }
