@@ -1,0 +1,120 @@
+@font-face {
+    font-family: Vazir Code;
+    src: url('Vazir-Code.eot');
+    src: url('Vazir-Code.eot?#iefix') format('embedded-opentype'), url('Vazir-Code.woff') format('woff'), url('Vazir-Code.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Vazir Code Hack;
+    src: url('Vazir-Code-Hack.eot');
+    src: url('Vazir-Code-Hack.eot?#iefix') format('embedded-opentype'), url('Vazir-Code-Hack.woff') format('woff'), url('Vazir-Code-Hack.ttf') format('truetype');
+    font-weight: normal;
+}
+
+body,
+h1,
+h2,
+h3 {
+    font-family: 'Vazir Code', 'Vazir Code Hack', monospaced;
+}
+
+#one-post-in-list,
+#header-menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#header-menu ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+body {
+    margin: auto;
+    max-width: 800px;
+    padding: 0 40px;
+    font-size: unset;
+    ;
+}
+
+#footer {
+    text-align: center;
+}
+
+#post-category {
+    border: black 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#one-post-in-list :not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#title h2 {
+    color: #666;
+}
+
+hr {
+    border-style: solid;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border: black 3px solid;
+}
+
+#post-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.one-comment img {
+    width: 60px;
+}
+
+.avatar-and-name,
+.comment-reply {
+    display: flex;
+    flex-direction: row;
+}
+
+.comment-reply {
+    align-items: baseline;
+}
+
+#pagination-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.pagination-button,
+#page-numbers a {
+    background-color: var(--PaginationBGColor);
+    border-radius: var(--BorderRadius);
+    padding: 5px;
+}
+
+#pagination-section :not(:last-of-type) {
+    margin-left: 5px;
+}
+
+.likeanddis {
+    text-align: center;
+}
