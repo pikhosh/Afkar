@@ -1,19 +1,11 @@
 @font-face {
-    font-family: Vazir Code;
-    src: url('Vazir-Code.eot');
-    src: url('Vazir-Code.eot?#iefix') format('embedded-opentype'), url('Vazir-Code.woff') format('woff'), url('Vazir-Code.ttf') format('truetype');
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: Vazir Code Hack;
-    src: url('Vazir-Code-Hack.eot');
-    src: url('Vazir-Code-Hack.eot?#iefix') format('embedded-opentype'), url('Vazir-Code-Hack.woff') format('woff'), url('Vazir-Code-Hack.ttf') format('truetype');
+    font-family: Behdad;
+    src: url(https://bayanbox.ir/download/521927549352849432/Behdad-Regular.ttf), url(https://bayanbox.ir/download/2566563334380828087/Behdad-Regular.otf), url(https://bayanbox.ir/download/8447146387304990502/Behdad-Regular.woff), url(https://bayanbox.ir/download/7309035304661827246/Behdad-Regular.woff2);
     font-weight: normal;
 }
 
 :root {
-    --Font: 'Vazir Code', 'Vazir Code Hack', monospaced;
+    --Font: Behdad, sans-serif;
     --BorderColor: Black;
 }
 
@@ -88,16 +80,38 @@ img {
 
 .one-comment img {
     width: 60px;
+    height: 60px;
+    margin-left: 5px;
+}
+
+.one-comment {
+    border: var(--BorderColor) solid 3px;
+    padding: 10px;
+}
+
+.comment-reply {
+    margin-right: 30px;
+}
+
+.comment-body,
+#follow {
+    margin: 20px 0;
+}
+
+#follow a {
+    font-weight: bold;
+}
+
+.comment-reply-body {
+    border: var(--BorderColor) solid 3px;
+    padding: 4px;
+    width: -webkit-fill-available;
 }
 
 .avatar-and-name,
 .comment-reply {
     display: flex;
     flex-direction: row;
-}
-
-.comment-reply {
-    align-items: baseline;
 }
 
 #pagination-section {
@@ -171,6 +185,10 @@ body {
 
 #page-content {
     margin-bottom: 20px;
+}
+
+#title h1 {
+    margin-block-end: 0;
 }
 
 @media (prefers-color-scheme: dark) {
