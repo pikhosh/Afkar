@@ -7,6 +7,7 @@
 :root {
     --Font: Behdad, sans-serif;
     --BorderColor: Black;
+    --Border: var(--BorderColor) solid 2px;
 }
 
 body,
@@ -40,7 +41,7 @@ body {
 }
 
 #post-category {
-    border: var(--BorderColor) 2px solid;
+    border: var(--Border);
     border-radius: 5px;
     padding: 5px;
 }
@@ -66,10 +67,14 @@ hr {
     border-style: solid;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    border: var(--BorderColor) 2px solid;
+img:not([src^="https://blog.ir/media/script/"]) {
+    max-width: 100%;
+    height: fit-content;
+    border: var(--Border);
+}
+
+img[src^="https://blog.ir/media/script/tiny_mce/plugins/emotions/img/"] {
+    border-radius: 10px;
 }
 
 #post-detail {
@@ -79,13 +84,11 @@ img {
 }
 
 .one-comment img {
-    width: 60px;
-    height: 60px;
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
 .one-comment {
-    border: var(--BorderColor) solid 2px;
+    border: var(--Border);
     padding: 10px;
 }
 
@@ -103,9 +106,11 @@ img {
 }
 
 .comment-reply-body {
-    border: var(--BorderColor) solid 2px;
+    border: var(--Border);
     padding: 4px;
     width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
 }
 
 .avatar-and-name,
@@ -189,6 +194,14 @@ body {
 
 #title h1 {
     margin-block-end: 0;
+}
+
+.comment-form {
+    border: var(--Border);
+}
+
+.one-comment {
+    margin-bottom: 15px;
 }
 
 @media (prefers-color-scheme: dark) {
