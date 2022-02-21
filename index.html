@@ -4,12 +4,22 @@
 
 <head>
 
-    <head:style></head:style>
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-code-font@v1.1.2/dist/font-face.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <head:style>
+        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-code-font@v1.1.2/dist/font-face.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+        <link rel="icon" type="image/png" href="(*blog_image*)">
+    </head:style>
 
-    <head:meta></head:meta>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <head:meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head:meta>
+
 
     <head:script></head:script>
 
@@ -23,7 +33,20 @@
     <div id="header">
 
         <div id="title">
+
+            <check:if rss_link>
+                <div id="rss-and-title">
+                    <a href="(*rss_link*)" id="rss-icon" title="آر اس اس وبلاگ">
+                        <i class="ri-rss-line"></i>
+
+                    </a>
+
+
+            </check:if>
             <h1><a href="(*blog_link*)">(*blog_title*)</a></h1>
+
+            </div>
+
             <p>(*blog_short_description*)</p>
 
         </div>
@@ -64,28 +87,39 @@
         </box:messages>
 
         <box:post_list>
+            <check:if post_list_title>
+
+                (*post_list_title*)
+
+
+            </check:if>
             <view:post_list>
+
+
+
+                <h1 class="(*post_date format*)">(*post_date format="%Y"*)</h1>
+
                 <div id="one-post-in-list">
 
                     <div id="post-date">
-                        <h3>(*post_date format="%d %B %y"*)</h3>
+                        <h3>(*post_date format="%d %B"*)</h3>
                     </div>
+
                     <div id="post-title">
                         <h3><a href="(*post_link*)">(*post_title*)</a></h3>
                     </div>
+
                     <box:post_categories>
                         <view:post_categories>
+
                             <div id="post-category">
                                 <a href="(*category_link*)">(*category_name*)</a>
                             </div>
 
-
+                        </view:post_categories>
+                    </box:post_categories>
 
                 </div>
-
-                </view:post_categories>
-
-                </box:post_categories>
 
             </view:post_list>
         </box:post_list>
@@ -203,32 +237,36 @@
 
                         <h3>نظر شما چه بود؟</h3>
 
-                        <check:if user_rated_down>
+                        <div id="like-buttons">
+                            <check:if user_rated_down>
 
-                            (*down_rates*)<a href="(*rate_down_link*)"><i class="ri-thumb-down-fill"></i></a>
+                                (*down_rates*)<a href="(*rate_down_link*)" title="نپسندیدم"><i class="ri-thumb-down-fill"></i></a>
 
-                        </check:if>
+                            </check:if>
 
-                        <check:if not user_rated_down>
+                            <check:if not user_rated_down>
 
-                            (*down_rates*)<a href="(*rate_down_link*)"><i class="ri-thumb-down-line"></i></a>
+                                (*down_rates*)<a href="(*rate_down_link*)" title="نپسندیدم"><i class="ri-thumb-down-line"></i></a>
 
-                        </check:if>
-
-
+                            </check:if>
 
 
-                        <check:if user_rated_up>
 
-                            (*up_rates*)<a href="(*rate_up_link*)"><i class="ri-thumb-up-fill"></i></a>
 
-                        </check:if>
+                            <check:if user_rated_up>
 
-                        <check:if not user_rated_up>
+                                (*up_rates*)<a href="(*rate_up_link*)" title="پسندیدم"><i class="ri-thumb-up-fill"></i></a>
 
-                            (*up_rates*)<a href="(*rate_up_link*)"><i class="ri-thumb-up-line"></i></a>
+                            </check:if>
 
-                        </check:if>
+                            <check:if not user_rated_up>
+
+                                (*up_rates*)<a href="(*rate_up_link*)" title="پسندیدم"><i class="ri-thumb-up-line"></i></a>
+
+                            </check:if>
+                        </div>
+
+
 
                     </div>
 

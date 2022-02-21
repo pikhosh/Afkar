@@ -4,10 +4,32 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: Vazir Code;
+    src: url('Vazir-Code.eot');
+    src: url('Vazir-Code.eot?#iefix') format('embedded-opentype'), url('Vazir-Code.woff') format('woff'), url('Vazir-Code.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Vazir Code Hack;
+    src: url('Vazir-Code-Hack.eot');
+    src: url('Vazir-Code-Hack.eot?#iefix') format('embedded-opentype'), url('Vazir-Code-Hack.woff') format('woff'), url('Vazir-Code-Hack.ttf') format('truetype');
+    font-weight: normal;
+}
+
+pre,
+code {
+    font-family: 'Vazir Code', 'Vazir Code Hack', monospaced;
+}
+
 :root {
-    --Font: Behdad, sans-serif;
+    --Font: Behdad, 'Rubik', sans-serif;
     --BorderColor: Black;
     --Border: var(--BorderColor) solid 2px;
+    --BorderRadius: 5px;
+    --BackgroundColor: white;
+    --FontColor: black;
 }
 
 body,
@@ -36,13 +58,28 @@ body {
     padding: 0 40px;
 }
 
+#rss-and-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+i {
+    margin-left: 5px;
+}
+
+#rss-icon:hover,
+#like-buttons a:hover {
+    text-decoration: none;
+}
+
 #footer {
     text-align: center;
 }
 
 #post-category {
     border: var(--Border);
-    border-radius: 5px;
+    border-radius: var(--BorderRadius);
     padding: 5px;
 }
 
@@ -61,16 +98,20 @@ a:hover {
 
 #title p {
     color: #666;
+    margin-block-start: 0;
+    margin-block-end: 2em;
 }
 
 hr {
     border-style: solid;
+    border-radius: var(--BorderRadius);
 }
 
 img:not([src^="https://blog.ir/media/script/"]) {
     max-width: 100%;
     height: fit-content;
     border: var(--Border);
+    border-radius: var(--BorderRadius);
 }
 
 img[src^="https://blog.ir/media/script/tiny_mce/plugins/emotions/img/"] {
@@ -83,13 +124,18 @@ img[src^="https://blog.ir/media/script/tiny_mce/plugins/emotions/img/"] {
     justify-content: space-between;
 }
 
-.one-comment img {
-    margin-left: 15px;
+.avatar-and-name img {
+    margin-left: 10px;
+}
+
+.comment-raply-avatar img {
+    margin-left: 2em;
 }
 
 .one-comment {
     border: var(--Border);
     padding: 10px;
+    border-radius: var(--BorderRadius);
 }
 
 .comment-reply {
@@ -109,14 +155,17 @@ img[src^="https://blog.ir/media/script/tiny_mce/plugins/emotions/img/"] {
     border: var(--Border);
     padding: 4px;
     width: -webkit-fill-available;
+    width: -moz-available;
     display: flex;
     align-items: center;
+    border-radius: var(--BorderRadius);
 }
 
 .avatar-and-name,
 .comment-reply {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
 }
 
 #pagination-section {
@@ -186,6 +235,7 @@ body {
     margin: 5px 40% 10px 40%;
     padding: 5px 0;
     width: -webkit-fill-available;
+    width: -moz-available;
 }
 
 #page-content {
@@ -198,18 +248,108 @@ body {
 
 .comment-form {
     border: var(--Border);
+    padding: 5px;
+    border-radius: var(--BorderRadius);
 }
 
 .one-comment {
     margin-bottom: 15px;
 }
 
+p {
+    margin: 1em 0;
+}
+
+[class*="۱۴۱۰"]~[class*="۱۴۱۰"],
+[class*="۱۴۰۹"]~[class*="۱۴۰۹"],
+[class*="۱۴۰۸"]~[class*="۱۴۰۸"],
+[class*="۱۴۰۷"]~[class*="۱۴۰۷"],
+[class*="۱۴۰۶"]~[class*="۱۴۰۶"],
+[class*="۱۴۰۵"]~[class*="۱۴۰۵"],
+[class*="۱۴۰۴"]~[class*="۱۴۰۴"],
+[class*="۱۴۰۳"]~[class*="۱۴۰۳"],
+[class*="۱۴۰۲"]~[class*="۱۴۰۲"],
+[class*="۱۴۰۱"]~[class*="۱۴۰۱"],
+[class*="۱۴۰۰"]~[class*="۱۴۰۰"],
+[class*="۱۳۹۹"]~[class*="۱۳۹۹"],
+[class*="۱۳۹۸"]~[class*="۱۳۹۸"],
+[class*="۱۳۹۷"]~[class*="۱۳۹۷"],
+[class*="۱۳۹۶"]~[class*="۱۳۹۶"],
+[class*="۱۳۹۵"]~[class*="۱۳۹۵"],
+[class*="۱۳۹۴"]~[class*="۱۳۹۴"],
+[class*="۱۳۹۳"]~[class*="۱۳۹۳"],
+[class*="۱۳۹۲"]~[class*="۱۳۹۲"],
+[class*="۱۳۹۱"]~[class*="۱۳۹۱"],
+[class*="۱۳۹۰"]~[class*="۱۳۹۰"],
+[class*="۱۳۸۹"]~[class*="۱۳۸۹"],
+[class*="۱۳۸۸"]~[class*="۱۳۸۸"],
+[class*="۱۳۸۷"]~[class*="۱۳۸۷"],
+[class*="۱۳۸۶"]~[class*="۱۳۸۶"],
+[class*="۱۳۸۵"]~[class*="۱۳۸۵"] {
+    display: none;
+}
+
+#post-title {
+    padding-left: 6em;
+    flex: 1;
+}
+
+#post-category {
+    display: none;
+    width: 9em;
+    text-align: center;
+}
+
+#post-date {
+    width: 5em;
+    margin-left: 1em;
+}
+
+.selected {
+    border: var(--Border);
+    border-radius: var(--BorderRadius);
+    padding: 5px;
+}
+
+
+/* کد تغییر ظاهر المان های بیان بلاگ */
+
+pre.prettyprint {
+    border: var(--Border);
+    border-radius: var(--BorderRadius);
+    padding: 5px;
+}
+
+pre {
+    background-color: var(--BackgroundColor);
+}
+
+
+/* پایان کد تغییر ظاهر المان های بیان بلاگ */
+
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #252525;
-        color: #ffffffde;
+        background-color: var(--BackgroundColor);
+        color: var(--FontColor);
     }
      :root {
         --BorderColor: white;
+        --FontColor: #ffffffde;
+        --BackgroundColor: #252525;
+    }
+    .prettyprint>span {
+        filter: invert(1);
+    }
+}
+
+@media (min-width: 1200px) {
+    #post-category {
+        display: unset;
+    }
+    #post-date {
+        margin-left: 5em;
+    }
+    .comment-raply-avatar img {
+        margin-left: 15px;
     }
 }
