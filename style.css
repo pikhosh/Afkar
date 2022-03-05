@@ -327,6 +327,9 @@ pre {
 
 /* پایان کد تغییر ظاهر المان های بیان بلاگ */
 
+
+/* Dark mode */
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: var(--BackgroundColor);
@@ -341,6 +344,9 @@ pre {
         filter: invert(1);
     }
 }
+
+
+/* End of Dark mode */
 
 @media (min-width: 1200px) {
     #post-category {
