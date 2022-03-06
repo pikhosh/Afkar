@@ -238,7 +238,7 @@ body {
     width: -moz-available;
 }
 
-#page-content {
+.text-content {
     margin-bottom: 20px;
 }
 
