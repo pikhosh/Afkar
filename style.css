@@ -89,7 +89,7 @@ i {
 
 a {
     text-decoration: none;
-    color: unset;
+    color: var(--FontColor);
 }
 
 a:hover {
