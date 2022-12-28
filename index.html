@@ -1,223 +1,131 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
 
     <head:style>
         <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-code-font@v1.1.2/dist/font-face.css" rel="stylesheet" type="text/css" />
+
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         </style>
+
         <link rel="icon" type="image/png" href="(*blog_image*)">
+
     </head:style>
-
-
-
 
     <head:meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head:meta>
 
-
     <head:script></head:script>
-
 
 </head>
 
-
 <body>
-
-
     <div id="header">
-
         <div id="title">
-
             <check:if rss_link>
                 <div id="rss-and-title">
                     <a href="(*rss_link*)" id="rss-icon" title="آر اس اس وبلاگ">
                         <i class="ri-rss-line"></i>
-
                     </a>
-
-
             </check:if>
             <h1><a href="(*blog_link*)">(*blog_title*)</a></h1>
-
-            </div>
-
-            <p>(*blog_short_description*)</p>
-
         </div>
-
-        <box:menu>
-
-            <div id="header-menu">
-                <ul>
-                    <view:menu>
-
-                        <li class="(*menu_item_selected*)">
-                            <a href="(*menu_item_link*)">(*menu_item_title*)</a>
-                        </li>
-
-                    </view:menu>
-                </ul>
-
-
-
-            </div>
-        </box:menu>
-
-
-
-
+        <p>(*blog_short_description*)</p>
+    </div>
+    <box:menu>
+        <div id="header-menu">
+            <ul>
+                <view:menu>
+                    <li class="(*menu_item_selected*)">
+                        <a href="(*menu_item_link*)">(*menu_item_title*)</a>
+                    </li>
+                </view:menu>
+            </ul>
+        </div>
+    </box:menu>
     </div>
     <hr>
     <div id="content-section">
         <box:messages>
-
             <view:messages>
-
                 <div class="item_(*message_type*)">
                     <div class="icon"></div>
                     (*message*)
                 </div>
             </view:messages>
         </box:messages>
-
         <box:post_list>
             <check:if post_list_title>
-
                 (*post_list_title*)
-
-
             </check:if>
             <view:post_list>
-
-
-
                 <h1 class="(*post_date format*)">(*post_date format="%Y"*)</h1>
-
                 <div id="one-post-in-list">
-
                     <div id="post-date">
                         <h3>(*post_date format="%d %B"*)</h3>
                     </div>
-
                     <div id="post-title">
                         <h3><a href="(*post_link*)">(*post_title*)</a></h3>
                     </div>
-
                     <box:post_categories>
                         <view:post_categories>
-
                             <div id="post-category">
                                 <a href="(*category_link*)">(*category_name*)</a>
                             </div>
-
                         </view:post_categories>
                     </box:post_categories>
-
                 </div>
-
             </view:post_list>
         </box:post_list>
-
         <box:pagination>
-
-
             <div id="pagination-section">
-
                 <check:if page_first>
-
                     <div class="pagination-button first-and-last">
-
                         <a href="(*page_first*)">
-                                صفحه اول
-                            </a>
+                            صفحه اول
+                        </a>
                     </div>
-
                 </check:if>
-
-
-
                 <check:if page_prev>
-
-
                     <div class="pagination-button">
-
                         <a href="(*page_prev*)">
-
-                                صفحه قبلی
-
-                            </a>
-
-
-
+                            صفحه قبلی
+                        </a>
                     </div>
-
                 </check:if page_prev>
-
                 <div id="page-numbers">
-
                     <view:pages spec="3,2,2,2,3,2">
                         <a href="(*page_link*)" class="(*page_current*)">
-
-                                (*page_num*)
-
-                            </a>
+                            (*page_num*)
+                        </a>
                     </view:pages>
-
                 </div>
-
-
-
                 <check:if page_next>
-
-
-
                     <div class="pagination-button">
-
                         <a href="(*page_next*)">
-
-                                صفحه بعدی
-
-                            </a>
-
-
+                            صفحه بعدی
+                        </a>
                     </div>
-
                 </check:if page_next>
-
                 <check:if page_last>
                     <div class="pagination-button first-and-last">
-
                         <a href="(*page_last*)">
-                                صفحه آخر
-                            </a>
+                            صفحه آخر
+                        </a>
                     </div>
-
                 </check:if>
-
-
             </div>
-
-
-
-
         </box:pagination>
-
-
-
         <box:post_detail>
-
-
             <h1>(*post_title*)</h1>
             <div id="post-detail">
                 <h3>(*post_date format="%d %B %y"*)</h3>
                 <h3>(*post_author*)</h3>
-
             </div>
             <div class="text-content">
                 (*post_full_content*)
@@ -226,309 +134,136 @@
                 دنبال کنید: <a href="https://blog.ir/panel/-/followed_blogs?follow=(((*blog_link*)))">(*blog_title*)</a>
             </div>
             <check:if post_rating>
-
-
-
-
                 <box:post_rating>
-
                     <div class="likeanddis">
-
-
                         <h3>نظر شما چه بود؟</h3>
-
                         <div id="like-buttons">
                             <check:if user_rated_down>
-
-                                (*down_rates*)<a href="(*rate_down_link*)" title="نپسندیدم"><i class="ri-thumb-down-fill"></i></a>
-
+                                (*down_rates*)<a href="(*rate_down_link*)" title="نپسندیدم"><i
+                                        class="ri-thumb-down-fill"></i></a>
                             </check:if>
-
                             <check:if not user_rated_down>
-
-                                (*down_rates*)<a href="(*rate_down_link*)" title="نپسندیدم"><i class="ri-thumb-down-line"></i></a>
-
+                                (*down_rates*)<a href="(*rate_down_link*)" title="نپسندیدم"><i
+                                        class="ri-thumb-down-line"></i></a>
                             </check:if>
-
-
-
-
                             <check:if user_rated_up>
-
-                                (*up_rates*)<a href="(*rate_up_link*)" title="پسندیدم"><i class="ri-thumb-up-fill"></i></a>
-
+                                (*up_rates*)<a href="(*rate_up_link*)" title="پسندیدم"><i
+                                        class="ri-thumb-up-fill"></i></a>
                             </check:if>
-
                             <check:if not user_rated_up>
-
-                                (*up_rates*)<a href="(*rate_up_link*)" title="پسندیدم"><i class="ri-thumb-up-line"></i></a>
-
+                                (*up_rates*)<a href="(*rate_up_link*)" title="پسندیدم"><i
+                                        class="ri-thumb-up-line"></i></a>
                             </check:if>
                         </div>
-
-
-
                     </div>
-
-
                 </box:post_rating>
-
-
             </check:if>
             <check:if post_has_comments_section>
-
                 <div class="comments-section-title">
-
                     <a name="comments"></a>
-
                     <a href="(*post_link*)#comment_form">نظرات ((*post_comment_count*))</a>
-
                 </div>
-
-
-
-
-
-
                 <box:post_comments>
                     <hr>
                     <div class="comments">
-
-
                         <view:post_comments>
-
                             <div class="one-comment">
-
                                 <a name="comment-(*comment_id*)"></a>
-
                                 <div class="avatar-and-name">
-
-
                                     <img src="(*comment_avatar*)">
-                                    <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> | <a href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M %p"*)</a>
+                                    <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> | <a
+                                            href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M
+                                            %p"*)</a>
                                     </h3>
-
-
                                 </div>
-
                                 <div class="comment-body">
-
                                     <span>(*comment_body*)</span>
-
                                 </div>
-
-
-
                                 <check:if comment_reply>
-
-
                                     <div class="comment-reply">
-
                                         <div class="comment-raply-avatar">
-
                                             <img src="(*comment_reply_avatar*)">
-
-
                                         </div>
-
                                         <div class="comment-reply-body">
-
                                             <span>(*comment_reply*)</span>
-
-
                                         </div>
-
-
                                     </div>
-
                                 </check:if>
-
-
-
-
-
                             </div>
-
-
-
                         </view:post_comments>
-
                     </div>
-
                 </box:post_comments>
-
-
-
-
-
-
-
-
-
             </check:if>
-
-
             <check:if post_has_send_comment>
-
                 <div class="comment-form">
-
                     <a name="comment_form"></a>
-
                     (*comment_add_form*)
-
-
                 </div>
-
-
-
             </check:if>
-
-
     </div>
-
     </box:post_detail>
-
-
-
     <box:page_detail>
-
-
         <h1>(*page_title*)</h1>
-
         <div class="text-content">
             (*page_content*)
         </div>
-
-
         <check:if page_has_comments_section>
-
             <div class="comments-section-title">
-
                 <a name="comments"></a>
-
                 <a href="(*page_link*)#comment_form">نظرات ((*page_comment_count*))</a>
-
             </div>
-
-
-
-
-
-
             <box:page_comments>
                 <hr>
                 <div class="comments">
-
-
                     <view:page_comments>
-
                         <div class="one-comment">
-
                             <a name="comment-(*comment_id*)"></a>
-
                             <div class="avatar-and-name">
-
-
                                 <img src="(*comment_avatar*)">
-                                <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> | <a href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M %p"*)</a>
+                                <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> | <a
+                                        href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M
+                                        %p"*)</a>
                                 </h3>
-
-
                             </div>
-
                             <div class="comment-body">
-
                                 <span>(*comment_body*)</span>
-
                             </div>
-
-
-
                             <check:if comment_reply>
-
-
                                 <div class="comment-reply">
-
                                     <div class="comment-raply-avatar">
-
                                         <img src="(*comment_reply_avatar*)">
-
-
                                     </div>
-
                                     <div class="comment-reply-body">
-
                                         <span>(*comment_reply*)</span>
-
-
                                     </div>
-
-
                                 </div>
-
                             </check:if>
-
-
-
-
-
                         </div>
-
-
-
                     </view:page_comments>
-
                 </div>
-
             </box:page_comments>
-
-
-
-
-
-
-
-
-
         </check:if>
-
-
         <check:if page_has_send_comment>
-
             <div class="comment-form">
-
                 <a name="comment_form"></a>
-
                 (*comment_add_form*)
-
-
             </div>
-
-
-
         </check:if>
-
-
         </div>
-
     </box:page_detail>
-
-
-
-
-
-
     </div>
-
     <hr>
 
     <div id="footer">
-        (*copyright_notice*) | طراح: <a href="https://pikhosh.blog.ir" target="blank" title="وبلاگ طراح قالب">پیخوش</a> (الهام گرفته از: <a href="https://github.com/joway/hugo-theme-yinyang" target="_blank" title="منبع طراحی">YinYang)</a>
+        (*copyright_notice*) | طراح: 
+
+        <a href="https://pikhosh.blog.ir" target="blank" title="وبلاگ طراح قالب">پیخوش</a>
+
+        (الهام گرفته از: 
+        
+        <a href="https://github.com/joway/hugo-theme-yinyang" target="_blank" title="منبع طراحی">YinYang)</a>
     </div>
 
-
 </body>
-
-
 
 </html>
