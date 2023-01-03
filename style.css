@@ -1,10 +1,4 @@
 @font-face {
-  font-family: Behdad;
-  src: url(https://bayanbox.ir/download/521927549352849432/Behdad-Regular.ttf), url(https://bayanbox.ir/download/2566563334380828087/Behdad-Regular.otf), url(https://bayanbox.ir/download/8447146387304990502/Behdad-Regular.woff), url(https://bayanbox.ir/download/7309035304661827246/Behdad-Regular.woff2);
-  font-weight: normal;
-}
-
-@font-face {
   font-family: Vazir Code;
   src: url("Vazir-Code.eot");
   src: url("Vazir-Code.eot?#iefix") format("embedded-opentype"), url("Vazir-Code.woff") format("woff"), url("Vazir-Code.ttf") format("truetype");
