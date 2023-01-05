@@ -29,16 +29,24 @@
 
 <body>
     <div id="header">
+
         <div id="title">
-            <check:if rss_link>
-                <div id="rss-and-title">
+
+            <div id="rss-and-title">
+
+                <check:if rss_link>
                     <a href="(*rss_link*)" id="rss-icon" title="آر اس اس وبلاگ">
                         <i class="ri-rss-line"></i>
                     </a>
-            </check:if>
-            <h1><a href="(*blog_link*)">(*blog_title*)</a></h1>
+                </check:if>
+
+                <h1><a href="(*blog_link*)">(*blog_title*)</a></h1>
+            </div>
+
+            <p>(*blog_short_description*)</p>
+            
         </div>
-        <p>(*blog_short_description*)</p>
+        
     </div>
     <box:menu>
         <div id="header-menu">
