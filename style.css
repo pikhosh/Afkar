@@ -42,6 +42,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  gap: 0.5rem;
+}
+
+#rss-and-title i {
+  margin: 0;
 }
 
 i {
